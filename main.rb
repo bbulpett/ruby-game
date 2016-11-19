@@ -1,18 +1,18 @@
 require 'gosu'
 
-class RunningHeroWindow < Gosu::Window
+class SpaceGameWindow < Gosu::Window
   def initialize
     super(960, 480)
-    self.caption = "Running Hero Game"
+    self.caption = "Space Game"
 
-    @hero = Gosu::Image.new("assets/hero.png")
+    @spaceship = Gosu::Image.new("assets/spaceship.png")
     @background = Gosu::Image.new("assets/background.png")
   end
 
   def draw
     @background.draw(0, 0, 0)
-    @hero.draw(50, 348, 1)
+    @spaceship.draw(50, 348, 1)
   end
 end
 
-RunningHeroWindow.new.show
+SpaceGameWindow.new.show
